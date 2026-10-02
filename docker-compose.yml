@@ -1,0 +1,4 @@
+services:
+  orion:
+    build: .
+    command: ["orion", "discover"]
