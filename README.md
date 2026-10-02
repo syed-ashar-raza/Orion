@@ -43,7 +43,7 @@ The local planner is deterministic so the core architecture can be tested reprod
 
 ## Capabilities
 
-- MCP server construction with `FastMCP`
+- MCP server construction with the MCP SDK `MCPServer` API
 - MCP client connections
 - In-process MCP testing
 - Tool discovery with `list_tools`
@@ -114,7 +114,7 @@ python -m orion.servers.calculator
 For deployable HTTP transport, the SDK supports Streamable HTTP:
 
 ```python
-mcp.run(transport="streamable-http")
+mcp.run_streamable_http_async(host="127.0.0.1", port=8000, streamable_http_path="/mcp")
 ```
 
 The standard MCP endpoint is `/mcp` when using the default Streamable HTTP setup.
